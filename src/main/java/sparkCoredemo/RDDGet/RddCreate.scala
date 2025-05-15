@@ -11,6 +11,7 @@ object RddCreate {
     //创建sc对象
     val sc = new SparkContext(conf)
     val list =List(1,2,3,4,5,6,7,8,9,10)
+
     //创建rdd
     val rdd1 = sc.makeRDD(list)
     val rdd2 = sc.makeRDD(list)
