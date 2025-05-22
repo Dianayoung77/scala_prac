@@ -20,6 +20,12 @@ object checkdemo {
       val sc = new SparkContext(conf)
       val rdd = sc.textFile("C:\\Users\\Diana\\IdeaProjects\\spark_demo\\src\\main\\java\\1.txt")
 
+      //提供一个路径用来存放checkpoint文件
+      sc.setCheckpointDir("C:\\Users\\Diana\\IdeaProjects\\spark_demo\\src\\main\\java\\check")
+      rdd.checkpoint()
+
+
+
       val wordRDD = rdd.flatMap(line => line.split(" "))
         .map(word => (word,1))
 
