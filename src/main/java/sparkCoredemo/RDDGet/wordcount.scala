@@ -13,6 +13,7 @@ object wordcount {
     //reducebykey,按照key完成value值，聚合
     val rdd3=rdd.reduceByKey(_+_).collect().foreach(println)
     //reducebykey,按照key完成value值，聚合
+
   }
 
 }
