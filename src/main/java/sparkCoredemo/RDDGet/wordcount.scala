@@ -30,7 +30,7 @@ object wordcount {
     
     // 3. 使用累加器替代reduceByKey
     rdd.foreach { case (word, count) =>
-      acc.add((word, count))  // 在行动操作中累加
+     acc.add((word, count))  // 在行动操作中累加
     }
     
     // 4. 直接输出累加器结果
@@ -38,5 +38,5 @@ object wordcount {
     acc.value.foreach(println)
     
     sc.stop()
-  }
-}
+
+}}

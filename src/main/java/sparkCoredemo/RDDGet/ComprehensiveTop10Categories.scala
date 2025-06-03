@@ -76,7 +76,8 @@ object ComprehensiveTop10Categories {
           .map(id => (id.toLong, 1L))
       })
 
-    // 合并所有品类ID的RDD
+    // 合并所有品类ID的RDD//
+    //cogroup
     val allCategoriesRDD = clickRDD.union(orderRDD).union(payRDD)
 
     // 使用reduceByKey统计品类出现次数，并按次数排序
